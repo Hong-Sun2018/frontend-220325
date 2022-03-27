@@ -4,7 +4,7 @@ import axios from "axios";
 import { makeStyles } from '@mui/styles';
 import { useRouter } from 'next/router';
 import { memo } from 'react';
-import StatisticsCard from './StatisticsCard';
+import StatisticsCard from './StatisticsCard/MySqlCard';
 
 const useStyles = makeStyles({
   root: {
@@ -29,10 +29,10 @@ const HomeStatistics = () => {
             <StatisticsCard type={'Product'}/>
           </Grid>
           <Grid item md={4} sm={12} xs={12}>
-            <StatisticsCard type={'Order'}/>
+            <StatisticsCard type={'Sale'}/>
           </Grid>
           <Grid item md={4} sm={12} xs={12}>
-            <StatisticsCard type={'User'}/>
+            <StatisticsCard type={'Store'}/>
           </Grid>
         </Grid>
       </Box>

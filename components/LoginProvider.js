@@ -10,9 +10,10 @@ const LoginProvider = ({children}) => {
 
   useEffect(() => {
     const url = api('SessionSignIn');
-    // console.log(url);
+    console.log(url);
     axios.get(url, {withCredentials: true}).then((res) => {
       if (res && res.data){
+        console.log(res.data)
         dispatch(setUserInfo(res.data));
       }
     }).catch( err => {

@@ -18,8 +18,8 @@ const useStyles = makeStyles(
 
 const navLinks = [
   {
-    title: 'Products',
-    link: '/products'
+    title: 'Home',
+    link: '/'
   },
   {
     title: 'Orders',

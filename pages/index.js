@@ -20,7 +20,7 @@ const Home = () => {
       </Head>
 
       <Box>
-        <PageContainer pageTitle={'Admin Pannel'}>
+        <PageContainer pageTitle={'MySQL'}>
           {(username && username.length !== 0) ? <HomeStatistics /> :  <HomeSignin /> }
         </PageContainer>
       </Box>
