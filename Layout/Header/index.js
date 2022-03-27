@@ -56,7 +56,7 @@ const useStyles = makeStyles({
 const Header = () => {
 
   const classes = useStyles();
-  const userInfo = useSelector((state) => {return state.userInfo.value});
+  const { username, user_id } = useSelector((state) => {return state.userInfo.value});
 
   return (
     <Box className={classes.root} sx={{ boxShadow: 2 }}>
@@ -67,7 +67,7 @@ const Header = () => {
           </Link>
         </Box>
         <Box className={classes.navBox}>
-          {userInfo && userInfo.isAdmin && <NavBar />}
+          {username && username.length > 0 && <NavBar />}
         </Box>
         <Box className={classes.userBox}>
           <User />

@@ -1,10 +1,10 @@
 const HOST_NAME = 'http://localhost:8000';
 
 const API_PATH = {
-  SignIn:'/user/signin',
-  SignUp: '/user/signup',
-  SignOut: '/user/signout',
-  TokenSignIn: '/user/token-signin',
+  SignIn:'/user/signin/',
+  SignUp: '/user/signup/',
+  SignOut: '/user/signout/',
+  SessionSignIn: '/user/session-signin/',
   CreateCategory: '/category/create-category',
   GetCategories: '/category',
   Product: '/product',

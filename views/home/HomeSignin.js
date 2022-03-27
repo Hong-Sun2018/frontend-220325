@@ -68,16 +68,17 @@ const HomeSignin = () => {
       return;
     }
 
-    const url = GetUrl('SignIn');
+    const url = api('SignIn');
     const reqBody = {
-      UserName: username,
-      Password: password,
+      username: username,
+      password: password,
     };
 
     // console.log(reqBody);
     axios.post(url, reqBody, {withCredentials:true})
       .then((res) => {
         if(res.data){
+          console.log(res.data)
           dispatch(setUserInfo(res.data));
           router.push('/');
         }
@@ -105,10 +106,17 @@ const HomeSignin = () => {
         onChange={handleChangePassword} onKeyDown={handleKeyDown}
       />
       <Grid container alignItems={'center'} justifyContent={'center'} spacing={2}>
-        <Grid item xs={12} sm={12}>
+      <Grid item xs={12} sm={6}>
           <Button className={classes.button} sx={{ textTransform: 'none' }} variant={'contained'} onClick={handleSignIn}>
             Sign In
           </Button>
+        </Grid>
+        <Grid item xs={12} sm={6}>
+          <Link href={'/signup'}>
+            <Button className={classes.button} sx={{ textTransform: 'none' }} variant={'outlined'} >
+              Sign Up
+            </Button>
+          </Link>
         </Grid>
       </Grid>
     </Box>

@@ -9,7 +9,7 @@ import { useSelector } from 'react-redux';
 
 const Home = () => {
 
-  const { userName, userID} = useSelector(state => state.userInfo.value);
+  const { username, user_id} = useSelector(state => state.userInfo.value);
 
   return (
     <div >
@@ -21,7 +21,7 @@ const Home = () => {
 
       <Box>
         <PageContainer pageTitle={'Admin Pannel'}>
-          {userName == '' ? <HomeSignin /> : <HomeStatistics /> }
+          {(username && username.length !== 0) ? <HomeStatistics /> :  <HomeSignin /> }
         </PageContainer>
       </Box>
     </div>

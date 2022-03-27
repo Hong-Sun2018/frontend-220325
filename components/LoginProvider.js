@@ -9,7 +9,7 @@ const LoginProvider = ({children}) => {
   const dispatch = useDispatch();
 
   useEffect(() => {
-    const url = api('TokenLoginAdmin');
+    const url = api('SessionSignIn');
     // console.log(url);
     axios.get(url, {withCredentials: true}).then((res) => {
       if (res && res.data){

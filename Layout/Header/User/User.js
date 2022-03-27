@@ -46,10 +46,10 @@ const UserMenu = ({username}) => {
 
   const signout = () => {
     setAnchorEl(null);
-    const url = API('SignOut');
+    const url = api('SignOut');
     axios.get(url, {withCredentials: true}).then(res => {
       if (res){
-        dispatch(setUserInfo({}));
+        dispatch(setUserInfo({username:'', user_id: ''}));
         router.reload();
       }
     }).catch(err => {
@@ -92,13 +92,13 @@ const UserMenu = ({username}) => {
 
 const User = () => {
 
-  const classes = useStyles();
-  const {userName, userID}= useSelector((state) => {return state.userInfo.value});
-  const dispatch = useDispatch();
-  
+  // const classes = useStyles();
+  const {username, user_id}= useSelector((state) => {return state.userInfo.value});
+  // const dispatch = useDispatch();
+  // console.log('username: ', username.length===0);
   return (
     <Box>
-      { userName == '' ? <SignIn /> : <UserMenu username={userName}/>}
+      { (username && username.length !== 0) ? <UserMenu username={username}/> : <SignIn />}
     </Box>
   )
 }
