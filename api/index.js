@@ -1,4 +1,4 @@
-const HOST_NAME = 'http://localhost:8000';
+const HOST_NAME = 'http://sunhongra.dynamic-dns.net:8000';
 
 const API_PATH = {
   // User
