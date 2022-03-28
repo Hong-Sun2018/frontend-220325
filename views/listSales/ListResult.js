@@ -51,6 +51,21 @@ const ListResult = ({ listSales }) => {
     console.log(listSales);
   }, [listSales])
 
+  const round = (str) => {
+    return parseInt(str)
+  }
+
+  const format = (str) => {
+    if (str.toString().length===1){
+      return `0${str}`;
+    }
+    else{
+      return str;
+    }
+  }
+
+  console.log('format___:   ', format('3'))
+
   return (
     <Box className={classes.resultContainer}>
       <Typography variant={'h4'}>
@@ -98,12 +113,12 @@ const ListResult = ({ listSales }) => {
                 </Box>
                 <Box className={classes.numberContainer} >
                   <Typography className={classes.typo} variant={'p'} >
-                    {`${item[2]}-${item[3]}`}
+                    {`${item[2]}-${format(item[3])}`}
                   </Typography>
                 </Box>
                 <Box className={classes.numberContainer} >
                   <Typography className={classes.typo} variant={'p'} >
-                    {item[4]}
+                    {round(item[4])}
                   </Typography>
                 </Box>
               </Box>
