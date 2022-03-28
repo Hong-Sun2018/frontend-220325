@@ -10,20 +10,19 @@ const API_PATH = {
   ReadProdFromFile: '/products/read-from-file/',
   GetProdNumMysql: '/products/get-total-num-mysql/',
   ClearProd: '/products/clear/',
+  GetH1List: '/products/get-h1-list/',
   // Sale
   ReadSaleFromFile: '/sales/read-from-file/',
   GetSaleNumMysql: '/sales/get-total-num-mysql/',
-  ClearSale: 'sales/clear/',
+  ClearSale: '/sales/clear/',
+  GetMinMaxDate: '/sales/get-min-max-date/',
+  GetSum: '/sales/get-sum/',
+  ListSales: '/sales/list-sales/',
   // Store
   ReadStoreFromFile: '/stores/read-from-file/',
   GetStoreNumMysql: '/stores/get-total-num-mysql/',
   ClearStore: '/stores/clear',
-  Product: '/product',
-  Order: '/order',
-  User: '/user',
-  GetCategoryPath: '/category/get-cate-path',
-  OrderAllUsers: '/order/get-orders-all-users',
-  OrderById: '/order/get-order',
+  GetCities: '/stores/get-cities/',
 };
 
 const API = (key) => {

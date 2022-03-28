@@ -11,7 +11,7 @@ const useStyles = makeStyles(
       justifyContent: 'right',
     },
     links: {
-      marginRight: '10px',
+      marginRight: '20px',
     }
   }
 );
@@ -22,12 +22,12 @@ const navLinks = [
     link: '/'
   },
   {
-    title: 'Orders',
-    link:'/orders'
+    title: 'Total Sales',
+    link:'/total-sales'
   },
   {
-    title: 'Users',
-    link:'/users'
+    title: 'List Sales',
+    link:'/list-sales'
   },
 ];
 
