@@ -1,6 +1,6 @@
 import Header from './Header/';
 // import Footer from "./Footer/Footer";
-import DialogBox from '../Components/DialogBox';
+import DialogBox from '../components/DialogBox';
 import { memo } from 'react';
 
  
